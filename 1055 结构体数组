@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+typedef struct//运用typedef构建结构体后,
+{			  //可直接用类型名定义结构体数组student[]
+    char xh[10],xm[20];
+    int c,m,e;
+}stu;//stu为本结构体的类型名
+void input(stu f[],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+    scanf("%s%s%d%d%d",f[i].xh,f[i].xm,&f[i].c,&f[i].m,&f[i].e);
+    }
+}
+void print(stu f[],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        printf("%s,%s,%d,%d,%d\n",f[i].xh,f[i].xm,f[i].c,f[i].m,f[i].e);
+    }
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    stu student[n];
+    input(student,n);
+    print(student,n);
+    return 0;
+}
