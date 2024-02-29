@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+void input() //定义一个输入函数。
+{
+    struct data{   //定义一个结构体
+        char num[10];
+        char name[30];
+        int a,b,c;
+    }da;
+    scanf("%s %s %d %d %d",da.num,da.name,&da.a,&da.b,&da.c);
+}
+void print()  //定义一个输出函数。
+{
+    struct data{
+        char num[10];
+        char name[30];
+        int a,b,c;
+    }da;
+    printf("%s,%s,%d,%d,%d\n",da.num,da.name,da.a,da.b,da.c);
+}
+int main()
+{
+    int n,i;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        input(); //调用输入函数。
+        print(); //调用输出函数。
+    }
+
+    return 0;
+}
+
